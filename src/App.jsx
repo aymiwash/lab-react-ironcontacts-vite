@@ -70,8 +70,8 @@ function App() {
                 <td><img className="contact-image" src={oneContact.pictureUrl ? oneContact.pictureUrl : ""} alt={oneContact.name}/></td>
                 <td><h3>{oneContact.name}</h3></td>
                 <td>{oneContact.popularity.toFixed(2)}</td>
-                <td>{oneContact.wonOscar ? "🏆" : null}</td>
-                <td>{oneContact.wonEmmy ? "🏆" : null}</td>
+                <td className="oscar">{oneContact.wonOscar ? "🏆" : null}</td>
+                <td className="oscar">{oneContact.wonEmmy ? "🏆" : null}</td>
                 <td><button className="button delete" onClick={()=>{deleteContact(oneContact.id)}}>Delete</button></td>
               </tr>
             )
