@@ -47,11 +47,11 @@ function App() {
     <div className="App">
       <h1>LAB | React IronContacts</h1>
 
-      <button onClick={addRandomContact}>Add Random Contact</button>
-      <button onClick={sortByName}>Sort by name</button>
-      <button onClick={sortByPopularity}>Sort by popularity</button>
+      <button className="button" onClick={addRandomContact}>Add Random Contact</button>
+      <button className="button" onClick={sortByName}>Sort by name</button>
+      <button className="button" onClick={sortByPopularity}>Sort by popularity</button>
 
-      <table>
+      <table className="contacts-table">
         <thead>
           <tr>
             <th>Picture</th>
@@ -67,12 +67,12 @@ function App() {
           contacts.map(oneContact =>{
             return (
               <tr key={oneContact.id}>
-                <td><img src={oneContact.pictureUrl ? oneContact.pictureUrl : ""} alt={oneContact.name} style={{height : "100px"}}/></td>
+                <td><img className="contact-image" src={oneContact.pictureUrl ? oneContact.pictureUrl : ""} alt={oneContact.name}/></td>
                 <td><h3>{oneContact.name}</h3></td>
                 <td>{oneContact.popularity.toFixed(2)}</td>
                 <td>{oneContact.wonOscar ? "🏆" : null}</td>
                 <td>{oneContact.wonEmmy ? "🏆" : null}</td>
-                <td><button onClick={()=>{deleteContact(oneContact.id)}}>Delete</button></td>
+                <td><button className="button delete" onClick={()=>{deleteContact(oneContact.id)}}>Delete</button></td>
               </tr>
             )
           })

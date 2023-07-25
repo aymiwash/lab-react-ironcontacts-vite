@@ -40,3 +40,35 @@
 .read-the-docs {
   color: #888;
 }
+
+.contacts-table{
+  border-collapse: collapse ;
+  background-color: rgb(77, 77, 77);
+  width: 85vw;
+}
+
+td{
+  padding: 10px;
+  background-color: rgb(58, 116, 167);
+}
+
+.contacts-table thead tr th{
+  background-color: rgb(41, 82, 119);
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.contact-image{
+  height: 150px;
+  border-radius: 10px;
+}
+
+.button{
+  margin: 20px 10px ;
+  background-color:rgb(58, 116, 167);
+}
+
+.delete{
+  border: solid white 1px;
+}
