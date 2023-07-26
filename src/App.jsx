@@ -14,8 +14,15 @@ function App() {
     const randomContactIndex = Math.floor(Math.random() * contactsJSON.length) + 5
     const randomContact = contactsJSON[randomContactIndex]
     if (randomContact !== undefined) {
-      setContacts(previousContacts =>
-        [...previousContacts, randomContact]
+      setContacts(previousContacts =>{
+        if(!previousContacts.includes(randomContact)){
+          return [...previousContacts, randomContact]
+        }
+        else{
+          console.log("full")
+          return previousContacts
+        }
+      }
       )
     }
   }
